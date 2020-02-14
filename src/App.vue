@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <h1>Todo</h1>
-    <TodoList />
+    <TodoList
+      v-bind:todos="todos" />
   </div>
 </template>
 
@@ -10,6 +11,15 @@
 import TodoList from '@/components/TodoList'
 export default {
   name: 'App',
+  data() {
+    return {
+      todos: [
+        {id: 1, title: 'Buy bread', completed: false},
+        {id: 2, title: 'Buy oil', completed: false},
+        {id: 3, title: 'Buy garlic', completed: false}
+      ]
+    }
+  },
   components: {
     TodoList
   }
