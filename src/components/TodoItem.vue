@@ -1,14 +1,21 @@
 <template>
-    <li>
-        todo item 2
-    </li>
+  <li>
+    <span>
+        <input type="checkbox">
+        <strong>{{ todo.id}}</strong>
+        {{ todo.title }}
+        <button>&times;</button>
+    </span>
+  </li>
 </template>
 
 <script>
 export default {
-    props: {
-        type: Object,
-        required: true
+  props: {
+    todo: {
+      type: Object,
+      required: true
     }
-}
+  }
+};
 </script>

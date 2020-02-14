@@ -1,8 +1,7 @@
 <template>
   <div>
     <ul>
-      {{todos}}
-      <li>todo 1</li>
+      <!-- {{todos}} -->
       <TodoItem
         v-for="todo in todos"
         v-bind:todo="todo"
@@ -20,3 +19,11 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+</style>
